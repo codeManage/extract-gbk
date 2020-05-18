@@ -1,0 +1,16 @@
+{
+    "regexp": "",
+    "fileExtension": [],
+    "excludeFolder": [],
+    "matchMode":[{
+        "matchPattern":"'{VALUE}'",
+        "replacePattern":"LOCALS['{VALUE}']"
+    },
+    {
+        "matchPattern":"\"{VALUE}\"",
+        "replacePattern":"LOCALS['{VALUE}']"
+    }],
+    "messagePattern":"\"{KEY}\":\"{VALUE}\",",
+    "regexpType":1,
+    "isCover": true
+}

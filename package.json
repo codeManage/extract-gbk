@@ -1,0 +1,25 @@
+{
+  "name": "extra-gbk",
+  "version": "1.0.0",
+  "description": "extra message source",
+  "bin": {
+    "extra-gbk": "./bin/index.js"
+  },
+  "author": {
+    "name": "xmg",
+    "email": "xmg9966@163.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "transliteration": "^1.6.5",
+    "uuid": "^3.3.2",
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^4.0.1",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "fs-extra": "^8.1.0"
+  }
+}
