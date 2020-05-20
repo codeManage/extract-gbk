@@ -1,18 +1,18 @@
-# extra-gbk
-* extra gbk 主要用于提取开发文件中的中文字符串
+# extract-gbk
+* extract-gbk 主要用于提取开发文件中的中文字符串
 
 
 ##### **安装步骤：**
 ````
-npm install extra-gbk -g
+npm install extract-gbk -g
 ````
 ##### **使用说明：**
 * 在对应需要提取的目录中打开命令行窗口,使用extra-gbk 命令行执行提取
 ```
-extra-gbk -p work --configPath /usr/work/config.js
+extract-gbk -p work --configPath /usr/work/config.js
 ```
 
-##### **extra-gbk 命令行相关参数说明**
+##### **extract-gbk 命令行相关参数说明**
 ```
  -p 基于当前命令行路径指定路径 如：work/expample
  --configPath 指定配置文件的绝对路径  如：/usr/work/config.json

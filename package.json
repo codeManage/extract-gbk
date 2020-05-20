@@ -1,9 +1,9 @@
 {
-  "name": "extra-gbk",
+  "name": "extract-gbk",
   "version": "1.0.0",
-  "description": "extra gbk message source",
+  "description": "extract gbk message source",
   "bin": {
-    "extra-gbk": "./bin/index.js"
+    "extract-gbk": "./bin/index.js"
   },
   "author": {
     "name": "xmg",
