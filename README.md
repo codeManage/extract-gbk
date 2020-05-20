@@ -19,7 +19,7 @@ extract-gbk -p work --configPath /usr/work/config.js
 ```
 
 ##### **config.json 配置文件：**
-* config.js配置文件主要用来进行匹配规则自定义配置，默认匹配模式如下
+* config.json配置文件主要用来进行匹配规则自定义，默认匹配模式如下
 ```
 {
     regexp:'*', //默认为空 ，自定义正则 ，优先级高于regexpType
