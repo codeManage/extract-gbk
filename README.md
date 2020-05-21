@@ -1,11 +1,11 @@
 # extract-gbk
 * extract-gbk 主要用于提取开发文件中的中文字符串，支持开发自定义提取、替换规则,以及生成对应的资源文件格式
 
-##### **安装步骤：**
+### **安装步骤：**
 ````
 npm install extract-gbk -g
 ````
-##### **使用说明：**
+### **使用说明：**
 * 在对应需要提取的目行窗录中打开命令口,使用extra-gbk 命令行执行提取
 ```
 //设置提取规则参考下面config.json文件说明
@@ -18,7 +18,7 @@ extract-gbk resetConfig
 extract-gbk run work/abc
 ```
 
-##### **config.json 配置文件：**
+###**config.json 配置文件：**
 * config.json配置文件主要用来进行匹配规则自定义，默认匹配替换模式如下
 ###### 注：以下{KEY}、{VALUE}为系统固定匹配标识不可变更
 `````
