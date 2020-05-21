@@ -9,13 +9,14 @@ const uuid = require('uuid');
 const PATH = require('path');
 const JOIN = PATH.join;
 //中文常规符号
-const chineseSymb = `\uff08\uff09\u3008\u3009\u300a\u300b\u300c\u300d\u300e\u300f\ufe43\ufe44\u3014\u3015\u2014\u2026\uff5e\ufe4f\uffe5\u3001\u3010\u3011\uff0c\u3002\uff1f\uff01\uff1a\uff1b\u201c\u201d\u2018\u2019`
+const chineseSymb = `\uff08\uff09\u3008\u3009\u300a\u300b\u300c\u300d\u300e\u300f\ufe43\ufe44\u3014\u3015\u2014\u2026\uff5e\ufe4f\uffe5\u3001\u3010\u3011\uff0c\u3002\uff1f\uff01\uff1a\uff1b\u201c\u201d\u2018\u2019 `
 const chinese = `\u4e00-\u9fa5`;
+const egSymb=`,?;.-_-`;
 const regexpMap = {
-    1:`([${chineseSymb}\\w\\n])*([${chinese}])+([${chineseSymb}${chinese}\\w\\n])*`,//包含中文字符并且可能包含（中文符号或英文字母或数字或换行符）
+    1:`([${chineseSymb}${chinese}${egSymb}\w\n])*([${chinese}])+([${chineseSymb}${egSymb}${chinese}\w\n])*`,//包含中文汉字并且可能包含（中文符号|英文字母|英文常规符号|数字|换行符|空白符）
     2:`([${chinese}])+`,//只包含中文字符
-    3:`([${chineseSymb}])*([${chinese}${chineseSymb}])+([${chineseSymb}])*`,//只包含中文字符并且可能包含中文常规符号
-    4:`([\\n\\s${chineseSymb}])*([${chinese}])+([${chineseSymb}\\n\\s])*`,//包含中文字符并且可能包含（中文常规符号或换行符）
+    3:`([${chineseSymb}])*([${chinese}${chineseSymb}])+([${chineseSymb}])*`,//只包含中文汉字并且可能包含(中文常规符号|空白符)
+    4:`([\n${chineseSymb}])*([${chinese}])+([${chineseSymb}\n])*`,//包含中文汉字并且可能包含（中文常规符号|换行符|空白符）
 };
 class ExtraMessage {
     constructor({
@@ -166,6 +167,7 @@ class ExtraMessage {
 module.exports = function({
     path,
     excludeFolder,
+    regexp,
     fileExtension,
     matchMode=[
         {
@@ -187,6 +189,7 @@ module.exports = function({
     fileExtension,
     matchMode,
     messagePattern,
+    regexp,
     regexpType,
     isCover
 })}
