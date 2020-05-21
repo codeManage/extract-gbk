@@ -1,6 +1,6 @@
 {
   "name": "extract-gbk",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "extract gbk message source",
   "bin": {
     "extract-gbk": "./bin/index.js"
