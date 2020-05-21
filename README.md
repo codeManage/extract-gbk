@@ -6,7 +6,7 @@
 npm install extract-gbk -g
 ````
 ##### **使用说明：**
-* 在对应需要提取的目录中打开命令行窗口,使用extra-gbk 命令行执行提取
+* 在对应需要提取的目行窗录中打开命令口,使用extra-gbk 命令行执行提取
 ```
 //设置提取规则参考下面config.json文件说明
 extract-gbk setConfig /usr/work/config.json
@@ -14,16 +14,17 @@ extract-gbk setConfig /usr/work/config.json
 //重置config.json 为默认
 extract-gbk resetConfig
 
-//提取work/abc
+//提取目录当前命令行所执行目录下的/work/abc
 extract-gbk run work/abc
 ```
 
 ##### **config.json 配置文件：**
-* config.json配置文件主要用来进行匹配规则自定义，默认匹配模式如下
+* config.json配置文件主要用来进行匹配规则自定义，默认匹配替换模式如下
+注：以下{KEY}、{VALUE}为系统固定匹配标识不可变更
 ```
 {
     regexp:'*', //默认为空 ，自定义正则 ，优先级高于regexpType
-    regexpType:3 ,
+    regexpType:1 ,
         //  1 包含中文汉字并且可能包含（中文符号|英文字母|英文常规符号|数字|换行符|空白符）
         //  2 仅包含中文汉字
         //  3 只包含中文汉字并且可能包含(中文常规符号|空白符)
