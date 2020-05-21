@@ -1,6 +1,5 @@
 # extract-gbk
-* extract-gbk 主要用于提取开发文件中的中文字符串
-
+* extract-gbk 主要用于提取开发文件中的中文字符串，支持开发自定义提取、替换规则,以及生成对应的资源文件格式
 
 ##### **安装步骤：**
 ````
@@ -9,13 +8,14 @@ npm install extract-gbk -g
 ##### **使用说明：**
 * 在对应需要提取的目录中打开命令行窗口,使用extra-gbk 命令行执行提取
 ```
-extract-gbk -p work --configPath /usr/work/config.js
-```
+//设置提取规则参考下面config.json文件说明
+extract-gbk setConfig /usr/work/config.json
+ 
+//重置config.json 为默认
+extract-gbk resetConfig
 
-##### **extract-gbk 命令行相关参数说明**
-```
- -p 基于当前命令行路径指定路径 如：work/expample
- --configPath 指定配置文件的绝对路径  如：/usr/work/config.json
+//提取work/abc
+extract-gbk run work/abc
 ```
 
 ##### **config.json 配置文件：**
