@@ -18,12 +18,12 @@ extract-gbk resetConfig
 extract-gbk run work/abc
 ```
 
-###**config.json 配置文件：**
+### **config.json 配置文件：**
 * config.json配置文件主要用来进行匹配规则自定义，默认匹配替换模式如下
 ###### 注：以下{KEY}、{VALUE}为系统固定匹配标识不可变更
-`````
+```
 {
-    regexp:'*', //默认为空 ，自定义正则 ，优先级高于regexpType
+    regexp:'*', //默认为空，自定义正则优先级高于regexpType
     regexpType:1 ,
         //  1 包含中文汉字并且可能包含（中文符号|英文字母|英文常规符号|数字|换行符|空白符）
         //  2 仅包含中文汉字
