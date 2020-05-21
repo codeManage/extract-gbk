@@ -20,8 +20,8 @@ extract-gbk run work/abc
 
 ##### **config.json 配置文件：**
 * config.json配置文件主要用来进行匹配规则自定义，默认匹配替换模式如下
-注：以下{KEY}、{VALUE}为系统固定匹配标识不可变更
-```
+######注：以下{KEY}、{VALUE}为系统固定匹配标识不可变更
+`````
 {
     regexp:'*', //默认为空 ，自定义正则 ，优先级高于regexpType
     regexpType:1 ,
